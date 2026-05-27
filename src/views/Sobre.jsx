@@ -1,15 +1,22 @@
 import foto from '../assets/camisa_cinza.jpeg'
+import RmLogo from '../assets/rm.svg?react'
 import styles from './Sobre.module.css'
 
 export default function Sobre() {
   return (
     <section id="sobre" className={styles.section}>
       <div className={styles.hero}>
+        <RmLogo className={styles.bgLogo} />
         <div className="container">
           <div className={styles.content}>
-            <div className={styles.photoWrapper}>
-              <img src={foto} alt="Renan Marques" className={styles.photo} />
-              <div className={styles.photoOverlay} />
+            <div className={styles.photoOuter}>
+              <div className={styles.photoWrapper}>
+                <img src={foto} alt="Renan Marques" className={styles.photo} />
+                <div className={styles.photoOverlay} />
+              </div>
+              <div className={styles.orbit}>
+                <RmLogo width="80" height="80" className={styles.orbitLogo} />
+              </div>
             </div>
             <div className={styles.text}>
               <h1>Renan Marques</h1>

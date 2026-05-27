@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FaChevronUp } from 'react-icons/fa'
+import rmLogo from './assets/rm.svg'
 import './App.css'
 import Sobre from './views/Sobre'
 import Projetos from './views/Projetos'
@@ -31,6 +32,9 @@ export default function App() {
     <>
       <nav className="nav">
         <div className="nav-inner">
+          <a href="#sobre" className="nav-logo">
+            <img src={rmLogo} alt="RM" className="nav-logo-img" />
+          </a>
           <ul className="nav-links">
             {links.map((l) => (
               <li key={l.href}><a href={l.href}>{l.label}</a></li>
