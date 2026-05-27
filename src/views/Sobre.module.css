@@ -1,0 +1,164 @@
+.section {
+  background: var(--bg);
+}
+
+/* ── Hero ── */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.photoWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+.photoOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.text h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.role {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bio {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-top: 4px;
+}
+
+/* ── Razão de ser ── */
+
+.razao {
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+
+.razaoTitle {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.razaoTitle em {
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: 12px;
+}
+
+.desc strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.ikigaiResumo {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.card {
+  background: var(--bg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .photoWrapper { width: 320px; height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .hero { height: auto; padding: 100px 0 60px; }
+  .content { flex-direction: column; align-items: center; gap: 32px; text-align: center; }
+  .photoWrapper { width: 220px; height: 220px; }
+  .text { align-items: center; }
+  .bio { text-align: center; }
+  .razao { padding: 60px 0; }
+  .grid { grid-template-columns: 1fr; }
+}
